@@ -1,13 +1,20 @@
 import { View, Text  , TouchableOpacity} from 'react-native';
 import React from 'react';
 import styles from './styles';
-
+import { useNavigation } from '@react-navigation/native';
 
 export default function Opérations() {
+
+    const navigation = useNavigation();
+
   return (
     <View style={styles.operationscontainer}>
           
-          <TouchableOpacity style={styles.operationscontainer.childone}>
+          <TouchableOpacity style={styles.operationscontainer.childone} 
+           onPress={()=>{
+            navigation.navigate('Fairetransfert')
+           }}
+          >
               <Text style={[styles.username , {color:'black'} ]}>
                     Faire un transfert
               </Text >

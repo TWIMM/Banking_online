@@ -111,7 +111,7 @@ export default function Cartes() {
                
                    
                     <View style={styles}>
-                      <Text style={[styles.username  , {color:'#e6e6e6'}]}>
+                      <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:'15%'}]}>
                           Investor
                        </Text>
 
@@ -122,21 +122,21 @@ export default function Cartes() {
                     </View>
 
                     <View style={styles}>
-                       <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:width*0.05}]}>
+                       <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:'15%'}]}>
                            1577     1733     4750     5554
                        </Text>
 
                     </View>
 
                     <View style={styles}>
-                       <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:width*0.04 ,  marginTop:width*0.01}]}>
+                       <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:'15%' ,  marginTop:width*0.01}]}>
                           EXP : 12/23
                        </Text>
 
                     </View>
 
                     <View style={styles.containlog2}>
-                       <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:width*0.04 , marginTop:width*0.01}]}>
+                       <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:'15%', marginTop:width*0.01}]}>
                           ULYSSE HUGO 
                        </Text >
                        <Image style={styles.log2} source={require('../image/log2.png')}/>
@@ -147,7 +147,7 @@ export default function Cartes() {
                 <Animated.View style={[styles.secchild , {opacity: animateCardTwo}]}>
    
                   <View style={styles}>
-                        <Text style={[styles.username  , {color:'#e6e6e6'}]}>
+                        <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:'15%'}]}>
                             Personal
                         </Text>
 
@@ -158,21 +158,21 @@ export default function Cartes() {
                       </View>
 
                       <View style={styles}>
-                        <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:width*0.05}]}>
+                        <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:'15%'}]}>
                             1939     7498     5858     5554
                         </Text>
 
                       </View>
 
                       <View style={styles}>
-                        <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:width*0.04 ,  marginTop:width*0.01}]}>
+                        <Text style={[styles.username  , {color:'#e6e6e6', fontSize:'15%' ,  marginTop:width*0.01}]}>
                             EXP : 12/23
                         </Text>
 
                       </View>
 
                       <View style={styles.containlog2}>
-                        <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:width*0.04 , marginTop:width*0.01}]}>
+                        <Text style={[styles.username  , {color:'#e6e6e6', fontSize:'15%', marginTop:width*0.01}]}>
                             ULYSSE HUGO 
                         </Text >
                         <Image style={styles.log2} source={require('../image/log2.png')}/>

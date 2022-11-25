@@ -206,7 +206,7 @@ const styles = {
        position:'fixed',
        paddingLeft:width*0.1,
        position:'fixed',
-       bottom:'-2%',
+       bottom:'5%',
        marginTop:width*0.23,
     },
     circfoot:{
@@ -293,7 +293,13 @@ const styles = {
     } , 
     log2:{
       marginLeft:'auto'
-    }
+    }, 
+    transfertcontainer:{
+      backgroundColor:'#dbf597',
+      height:height,
+      width:width, 
+      padding:width*0.05,
+    },
 
 
 }; 

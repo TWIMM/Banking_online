@@ -6,6 +6,7 @@ import { Provider } from 'react-redux';
 import styles from './Components/styles';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
+import Fairetransfert from './Components/Fairetransfert';
 const Stack = createNativeStackNavigator();
 
 
@@ -19,6 +20,14 @@ export default function App() {
           component={Homescreen} 
           options={{
             headerShown:false,
+          }}
+          />
+           <Stack.Screen 
+          name="Fairetransfert" 
+          component={Fairetransfert} 
+          options={{
+            headerShown:false,
+            presentation: 'modal'
           }}
           />
         </Stack.Navigator>
