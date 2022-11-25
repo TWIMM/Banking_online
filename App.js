@@ -4,13 +4,25 @@ import Homescreen from './Components/Homescreen';
 import store from './Components/redux/Store/store';
 import { Provider } from 'react-redux';
 import styles from './Components/styles';
+import { NavigationContainer } from '@react-navigation/native';
+import { createNativeStackNavigator } from '@react-navigation/native-stack';
+const Stack = createNativeStackNavigator();
+
 
 export default function App() {
   return (
     <Provider store={store}>
-        <SafeAreaView style={styles.generalcontainer} >
-          <Homescreen />
-        </SafeAreaView>
+      <NavigationContainer>
+        <Stack.Navigator initialRouteName="Homescreen">
+          <Stack.Screen 
+          name="Homescreen" 
+          component={Homescreen} 
+          options={{
+            headerShown:false,
+          }}
+          />
+        </Stack.Navigator>
+      </NavigationContainer>
     </Provider>
   );
 }

@@ -206,6 +206,7 @@ const styles = {
        position:'fixed',
        paddingLeft:width*0.1,
        position:'fixed',
+       bottom:'-2%',
        marginTop:width*0.23,
     },
     circfoot:{

@@ -165,17 +165,9 @@ export default function Header() {
           {/*   <TouchableOpacity style={styles.contHeader}>
               <AntDesign name="back" size={24} color="red" />
             </TouchableOpacity> */}
-            <TouchableOpacity style={styles.threecircles}>
-              <View style={styles.circ}>
-          
-              </View>
-              <View style={styles.circ}>
-          
-              </View>
-              <View style={styles.circ}>
-          
-              </View>
-            </TouchableOpacity>
+              <Text style={[styles.username , {fontSize:'20%'}]}>
+                BIENVENU
+              </Text>
         </View>
 
         <View style={styles.secondchild}>
