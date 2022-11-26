@@ -20,23 +20,27 @@ export default function Opérations() {
               </Text >
           </TouchableOpacity >
 
-          <TouchableOpacity style={styles.operationscontainer.childthree}>
+          <TouchableOpacity style={styles.operationscontainer.childthree}
+              onPress={()=>{
+                navigation.navigate('Demandercarte')
+             }}
+          >
               <Text style={[styles.username , {color:'black'} ]}>
                   Demander une carte
               </Text >
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.operationscontainer.childthree}>
+          <TouchableOpacity style={styles.operationscontainer.childthree}
+             onPress={()=>{
+                navigation.navigate('Acceptonlinepay')
+             }}
+          >
               <Text style={[styles.username , {color:'black'} ]}>
                    Confirmer un achat en ligne
               </Text >
           </TouchableOpacity>
 
-          <TouchableOpacity style={styles.operationscontainer.childthree}>
-              <Text style={[styles.username , {color:'black'} ]}>
-                 Retrait par POS
-              </Text >
-          </TouchableOpacity>
+         
 
     </View>
   )

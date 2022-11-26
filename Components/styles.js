@@ -294,13 +294,80 @@ const styles = {
     log2:{
       marginLeft:'auto'
     }, 
+    
     transfertcontainer:{
       backgroundColor:'#dbf597',
       height:height,
       width:width, 
       padding:width*0.05,
+      display:'flex', 
+      flexDirection:'column', 
+      alignItems:'center'
     },
+    allpay:{
+      
+      display:'flex', 
+      flexDirection:'column',
+      alignItems:'center', 
+      justifyContent:'space-between',
+      height:height, 
+      width:width, 
+      backgroundColor:'#dbf597',
+      overflow:'hidden',
 
+
+      childone:{
+      
+
+      /*   border:'solid', 
+        borderWidth:width*0.005, */
+        padding:width*0.03,
+      /*   borderRadius:'10%',
+        borderColor:'#149956', */
+        marginTop:width*0.05,
+        display:'flex', 
+        flexDirection:'row',
+        width:width *0.9, 
+        borderRadius:'10%',
+        justifyContent : 'space-between', 
+        backgroundColor:'#149956'
+      },
+    },
+    montanttwo:{
+      top: width*0.3,
+      border:'solid', 
+      borderWidth:width*0.003, 
+      borderColor:'#149956',
+      width:width*0.7, 
+      height:height*0.05,
+      borderRadius:width*0.03, 
+    },
+    montant:{
+       top: width*0.2,
+       border:'solid', 
+       borderWidth:width*0.003, 
+       borderColor:'#149956',
+       width:width*0.7, 
+       height:height*0.05,
+       borderRadius:width*0.03, 
+       
+       childone:{
+        display:'flex',
+        justifyContent:'center', 
+        
+       }, 
+       makeTrans:{
+        borderRadius:width*0.03, 
+        backgroundColor:'#149956',
+        width:width*0.7, 
+        height:height*0.05,
+        top:width*0.5,
+        display:'flex',
+        justifyContent:'center', 
+        alignItems:'center',
+      },
+
+    },
 
 }; 
 export default styles; 

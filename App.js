@@ -7,6 +7,8 @@ import styles from './Components/styles';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import Fairetransfert from './Components/Fairetransfert';
+import Acceptonlinepay from './Components/Acceptonlinepay';
+import Demandercarte from './Components/Demandercarte';
 const Stack = createNativeStackNavigator();
 
 
@@ -22,9 +24,25 @@ export default function App() {
             headerShown:false,
           }}
           />
-           <Stack.Screen 
+          <Stack.Screen 
           name="Fairetransfert" 
           component={Fairetransfert} 
+          options={{
+            headerShown:false,
+            presentation: 'modal'
+          }}
+          />
+          <Stack.Screen 
+          name="Acceptonlinepay" 
+          component={Acceptonlinepay} 
+          options={{
+            headerShown:false,
+            
+          }}
+          />
+           <Stack.Screen 
+          name="Demandercarte" 
+          component={Demandercarte} 
           options={{
             headerShown:false,
             presentation: 'modal'

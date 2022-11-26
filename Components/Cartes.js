@@ -10,7 +10,10 @@ export default function Cartes() {
    const width =  Dimensions.get('window').width;
    const [scrollValue, setScrollValue] = useState();
    const animateCard = useRef(new Animated.Value(1)).current; 
+   const animateCard_scale = useRef(new Animated.Value(1)).current; 
    const animateCardTwo = useRef(new Animated.Value(1)).current; 
+   const animateCardTwo_scale = useRef(new Animated.Value(1)).current; 
+
 
 
    function handleAnimation(x) {
@@ -21,7 +24,7 @@ export default function Cartes() {
    }
 
    function checkNumbOnescroll(){
-    if( scrollValue > 38 && scrollValue < 372 ){
+    if( scrollValue > 38 ){
       //console.log('FIRST ONE ENTERED');
        Animated.timing(
         animateCard, 
@@ -31,8 +34,28 @@ export default function Cartes() {
           useNativeDriver:true,
         }
        ).start();
+
+       Animated.timing(
+        animateCard_scale, 
+        {
+          toValue:0.7,
+          duration:70,
+          useNativeDriver:true,
+        }
+       ).start();
+
      } else {
       //console.log(' Not here');
+
+      Animated.timing(
+        animateCard_scale, 
+        {
+          toValue:1,
+          duration:25,
+          useNativeDriver:true,
+        }
+       ).start();
+
       Animated.timing(
         animateCard, 
         {
@@ -43,6 +66,10 @@ export default function Cartes() {
        ).start()
      }
    }
+
+
+
+   
 
    function checkNumbTwoscroll(){
     if( scrollValue > 410 && scrollValue < 740 ){
@@ -55,6 +82,17 @@ export default function Cartes() {
           useNativeDriver:true,
         }
        ).start();
+
+       Animated.timing(
+        animateCardTwo_scale, 
+        {
+          toValue:0.7,
+          duration:70,
+          useNativeDriver:true,
+        }
+       ).start();
+
+
      } else {
       //console.log(' Not here');
       Animated.timing(
@@ -64,7 +102,18 @@ export default function Cartes() {
           duration:25,
           useNativeDriver:true,
         }
+       ).start(); 
+
+       Animated.timing(
+        animateCardTwo_scale, 
+        {
+          toValue:1,
+          duration:25,
+          useNativeDriver:true,
+        }
        ).start()
+
+       
      }
    }
 
@@ -107,7 +156,7 @@ export default function Cartes() {
 
             <View style={styles.cardContain}>
 
-                <Animated.View style={[styles.fcard , {opacity: animateCard}]}>
+                <Animated.View style={[styles.fcard , {opacity: animateCard , transform:[{scale:animateCard_scale}]}]}>
                
                    
                     <View style={styles}>
@@ -144,7 +193,7 @@ export default function Cartes() {
 
                 </Animated.View>
 
-                <Animated.View style={[styles.secchild , {opacity: animateCardTwo}]}>
+                <Animated.View style={[styles.secchild , {opacity: animateCardTwo ,  transform:[{scale:animateCardTwo_scale}]}]}>
    
                   <View style={styles}>
                         <Text style={[styles.username  , {color:'#e6e6e6' , fontSize:'15%'}]}>
@@ -182,8 +231,7 @@ export default function Cartes() {
                 </Animated.View>
 
                {/*  <View style={styles.thirdcard}>
-                </View>
- */}
+                </View>*/}
             </View>
 
        </ScrollView>
