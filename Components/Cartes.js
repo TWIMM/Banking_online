@@ -23,7 +23,10 @@ export default function Cartes() {
      setScrollValue(scrolling);
    }
 
+
+
    function checkNumbOnescroll(){
+    
     if( scrollValue > 38 ){
       //console.log('FIRST ONE ENTERED');
        Animated.timing(
